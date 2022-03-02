@@ -46,7 +46,17 @@
     <None Include="UsingVar\Program1.cs" />
     <None Include="Constant\Program1.cs" />
     <None Include="Enum\Program1.cs" />
-    <None Include="Nullable\Program1.cs" />
+    <None Include="Null\Program1.cs" />
+    <None Include="Null\NullConditionalOpeator.cs" />
+    <None Include="Null\NullCoalescing.cs" />
+    <None Include="Method 6\SwapByRef.cs" />
+    <None Include="Method 6\RefReturn.cs" />
+    <None Include="Method 6\UsingOut.cs" />
+    <None Include="Method 6\Overloading.cs" />
+    <None Include="Method 6\UsingParams.cs" />
+    <None Include="Method 6\NamedParameter.cs" />
+    <None Include="Method 6\OptionalParameter.cs" />
+    <Compile Include="Method 6\LocalFunction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
