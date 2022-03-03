@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Class 7\CLR.md" />
     <None Include="UsingVar\Program1.cs" />
     <None Include="Constant\Program1.cs" />
     <None Include="Enum\Program1.cs" />
@@ -56,7 +57,9 @@
     <None Include="Method 6\UsingParams.cs" />
     <None Include="Method 6\NamedParameter.cs" />
     <None Include="Method 6\OptionalParameter.cs" />
-    <Compile Include="Method 6\LocalFunction.cs" />
+    <None Include="Class 7\BasicClass.cs" />
+    <None Include="Method 6\LocalFunction.cs" />
+    <None Include="Class 7\Constructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
