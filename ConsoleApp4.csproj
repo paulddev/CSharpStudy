@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -60,6 +61,25 @@
     <None Include="Class 7\BasicClass.cs" />
     <None Include="Method 6\LocalFunction.cs" />
     <None Include="Class 7\Constructor.cs" />
+    <None Include="Class 7\StaticField.cs" />
+    <None Include="Class 7\DeepCopy.cs" />
+    <None Include="Class 7\This.cs" />
+    <None Include="Class 7\ThisConstructor.cs" />
+    <None Include="Class 7\AccessModifier.cs" />
+    <None Include="Class 7\Inheritance.cs" />
+    <None Include="Class 7\TypeCasting.cs" />
+    <None Include="Class 7\Overriding.cs" />
+    <None Include="Class 7\MethodHiding.cs" />
+    <None Include="Class 7\SealedMethod.cs" />
+    <None Include="Class 7\ReadonlyFields.cs" />
+    <None Include="Class 7\NestedClass.cs" />
+    <None Include="Class 7\PartialClass.cs" />
+    <None Include="Class 7\ExtensionMethod.cs" />
+    <None Include="Class 7\Structure.cs" />
+    <None Include="Class 7\ReadonlyStruct.cs" />
+    <None Include="Class 7\ReadonlyMethod.cs" />
+    <None Include="Class 7\Tuple.cs" />
+    <None Include="Class 7\PositionalPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
