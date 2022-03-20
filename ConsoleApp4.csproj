@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,46 +44,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Class 7\CLR.md" />
+    <None Include="7 Class\CLR.md" />
     <None Include="UsingVar\Program1.cs" />
     <None Include="Constant\Program1.cs" />
     <None Include="Enum\Program1.cs" />
     <None Include="Null\Program1.cs" />
     <None Include="Null\NullConditionalOpeator.cs" />
     <None Include="Null\NullCoalescing.cs" />
-    <None Include="Method 6\SwapByRef.cs" />
-    <None Include="Method 6\RefReturn.cs" />
-    <None Include="Method 6\UsingOut.cs" />
-    <None Include="Method 6\Overloading.cs" />
-    <None Include="Method 6\UsingParams.cs" />
-    <None Include="Method 6\NamedParameter.cs" />
-    <None Include="Method 6\OptionalParameter.cs" />
-    <None Include="Class 7\BasicClass.cs" />
-    <None Include="Method 6\LocalFunction.cs" />
-    <None Include="Class 7\Constructor.cs" />
-    <None Include="Class 7\StaticField.cs" />
-    <None Include="Class 7\DeepCopy.cs" />
-    <None Include="Class 7\This.cs" />
-    <None Include="Class 7\ThisConstructor.cs" />
-    <None Include="Class 7\AccessModifier.cs" />
-    <None Include="Class 7\Inheritance.cs" />
-    <None Include="Class 7\TypeCasting.cs" />
-    <None Include="Class 7\Overriding.cs" />
-    <None Include="Class 7\MethodHiding.cs" />
-    <None Include="Class 7\SealedMethod.cs" />
-    <None Include="Class 7\ReadonlyFields.cs" />
-    <None Include="Class 7\NestedClass.cs" />
-    <None Include="Class 7\PartialClass.cs" />
-    <None Include="Class 7\ExtensionMethod.cs" />
-    <None Include="Class 7\Structure.cs" />
-    <None Include="Class 7\ReadonlyStruct.cs" />
-    <None Include="Class 7\ReadonlyMethod.cs" />
-    <None Include="Class 7\Tuple.cs" />
-    <None Include="Class 7\PositionalPattern.cs" />
+    <None Include="6 Method\SwapByRef.cs" />
+    <None Include="6 Method\RefReturn.cs" />
+    <None Include="6 Method\UsingOut.cs" />
+    <None Include="6 Method\Overloading.cs" />
+    <None Include="6 Method\UsingParams.cs" />
+    <None Include="6 Method\NamedParameter.cs" />
+    <None Include="6 Method\OptionalParameter.cs" />
+    <None Include="7 Class\BasicClass.cs" />
+    <None Include="6 Method\LocalFunction.cs" />
+    <None Include="7 Class\Constructor.cs" />
+    <None Include="7 Class\StaticField.cs" />
+    <None Include="7 Class\DeepCopy.cs" />
+    <None Include="7 Class\This.cs" />
+    <None Include="7 Class\ThisConstructor.cs" />
+    <None Include="7 Class\AccessModifier.cs" />
+    <None Include="7 Class\Inheritance.cs" />
+    <None Include="7 Class\TypeCasting.cs" />
+    <None Include="7 Class\Overriding.cs" />
+    <None Include="7 Class\MethodHiding.cs" />
+    <None Include="7 Class\SealedMethod.cs" />
+    <None Include="7 Class\ReadonlyFields.cs" />
+    <None Include="7 Class\NestedClass.cs" />
+    <None Include="7 Class\PartialClass.cs" />
+    <None Include="7 Class\ExtensionMethod.cs" />
+    <None Include="7 Class\Structure.cs" />
+    <None Include="7 Class\ReadonlyStruct.cs" />
+    <None Include="7 Class\ReadonlyMethod.cs" />
+    <None Include="7 Class\Tuple.cs" />
+    <None Include="7 Class\PositionalPattern.cs" />
+    <None Include="8 Interface_and_abstract\interface.cs" />
+    <None Include="8 Interface_and_abstract\DerivedInterface.cs" />
+    <None Include="8 Interface_and_abstract\MultiInterfaceInheritance.cs" />
+    <None Include="8 Interface_and_abstract\DefaultImplementation.cs" />
+    <None Include="8 Interface_and_abstract\AbstractClass.cs" />
+    <None Include="9 Property\Property.cs" />
+    <None Include="9 Property\AutoImplementedProperty.cs" />
+    <None Include="9 Property\ConstructorWithProperty.cs" />
+    <None Include="9 Property\InitOnly.cs" />
+    <None Include="9 Property\Record.cs" />
+    <None Include="9 Property\WithExp.cs" />
+    <None Include="9 Property\RecordComp.cs" />
+    <None Include="9 Property\AnonymousType.cs" />
+    <None Include="9 Property\PropertiesInterface.cs" />
+    <None Include="9 Property\PropertiesInAbstractClass.cs" />
+    <None Include="10 Collection_and_Indexer\10_1_InitializingArray.cs" />
+    <None Include="10 Collection_and_Indexer\10_2_MoreOnArray.cs" />
+    <None Include="10 Collection_and_Indexer\10_3_2DArray.cs" />
+    <None Include="10 Collection_and_Indexer\10_5_JaggedArray.cs" />
+    <None Include="10 Collection_and_Indexer\10_4_ArrayList.cs" />
+    <None Include="10 Collection_and_Indexer\10_6_Queue.cs" />
+    <None Include="10 Collection_and_Indexer\10_7_Stack.cs" />
+    <None Include="10 Collection_and_Indexer\10_8_Hashtable.cs" />
+    <None Include="10 Collection_and_Indexer\10_9_InitializingCollections.cs" />
+    <None Include="10 Collection_and_Indexer\10_10_Indexer.cs" />
+    <None Include="10 Collection_and_Indexer\10_11_Yield.cs" />
+    <None Include="10 Collection_and_Indexer\10_12_Enumerable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
