@@ -107,6 +107,26 @@
     <None Include="10 Collection_and_Indexer\10_10_Indexer.cs" />
     <None Include="10 Collection_and_Indexer\10_11_Yield.cs" />
     <None Include="10 Collection_and_Indexer\10_12_Enumerable.cs" />
+    <None Include="11 Generic_Programming\1_Generic.cs" />
+    <None Include="11 Generic_Programming\2_ConstraintsOnTypeParameters.cs" />
+    <None Include="11 Generic_Programming\3_List.cs" />
+    <None Include="11 Generic_Programming\4_Queue.cs" />
+    <None Include="11 Generic_Programming\5_Stack.cs" />
+    <None Include="11 Generic_Programming\6_Dictionary.cs" />
+    <None Include="11 Generic_Programming\7_EnumerableGeneric.cs" />
+    <None Include="12 Exception\1_TryCatch.cs" />
+    <None Include="12 Exception\2_Throw.cs" />
+    <None Include="12 Exception\3_ThrowExpression.cs" />
+    <None Include="12 Exception\4_Finally.cs" />
+    <None Include="12 Exception\5_MyException.cs" />
+    <None Include="12 Exception\6_ExceptionFiltering.cs" />
+    <None Include="12 Exception\7_StackTrace.cs" />
+    <None Include="13 Delegate_and_Event\1_Delegate.cs" />
+    <None Include="13 Delegate_and_Event\2_UsingCallback.cs" />
+    <None Include="13 Delegate_and_Event\3_GenericDelegate.cs" />
+    <None Include="13 Delegate_and_Event\4_DelegateChains.cs" />
+    <None Include="13 Delegate_and_Event\5_AnonymousMethod.cs" />
+    <Compile Include="13 Delegate_and_Event\6_Event.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
