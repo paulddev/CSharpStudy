@@ -126,7 +126,18 @@
     <None Include="13 Delegate_and_Event\3_GenericDelegate.cs" />
     <None Include="13 Delegate_and_Event\4_DelegateChains.cs" />
     <None Include="13 Delegate_and_Event\5_AnonymousMethod.cs" />
-    <Compile Include="13 Delegate_and_Event\6_Event.cs" />
+    <None Include="13 Delegate_and_Event\6_Event.cs" />
+    <None Include="14 Lambda\1_SimpleLambda.cs" />
+    <None Include="14 Lambda\2_StatementLambda.cs" />
+    <None Include="14 Lambda\3_FuncTest.cs" />
+    <None Include="14 Lambda\4_ActionTest.cs" />
+    <None Include="15 LINQ\1_From.cs" />
+    <None Include="15 LINQ\2_SimpleLinq.cs" />
+    <None Include="15 LINQ\3_FromFrom.cs" />
+    <None Include="15 LINQ\4_GroupBy.cs" />
+    <None Include="15 LINQ\5_Join.cs" />
+    <None Include="15 LINQ\6_SimpleLinq2.cs" />
+    <None Include="15 LINQ\7_MinMaxAvg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
