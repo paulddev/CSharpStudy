@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Study\GarbaseCollection\1_garbage.cs" />
     <None Include="7 Class\CLR.md" />
     <None Include="UsingVar\Program1.cs" />
     <None Include="Constant\Program1.cs" />
