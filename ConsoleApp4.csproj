@@ -138,6 +138,11 @@
     <None Include="15 LINQ\5_Join.cs" />
     <None Include="15 LINQ\6_SimpleLinq2.cs" />
     <None Include="15 LINQ\7_MinMaxAvg.cs" />
+    <None Include="16 Reflection_and_Attribute\1_GetType.cs" />
+    <None Include="16 Reflection_and_Attribute\2_DynamicInstance.cs" />
+    <None Include="16 Reflection_and_Attribute\3_BasicAttribute.cs" />
+    <None Include="16 Reflection_and_Attribute\4_CallerInfo.cs" />
+    <None Include="16 Reflection_and_Attribute\5_HistoryAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
