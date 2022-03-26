@@ -119,12 +119,12 @@ class Program
 ```
 
 ## Equals
-`Equals` : object, IEquatable<T>
+`Equals` : object, `IEquatable<T>`
 - object 클래스가 제공
 - 모든 타입에 존재
 
-`CompareTo()` : IComparable, IComparable<T>
-- IComparable or IComparable<T> 인터페이스를 구현한 타입에만 존재
+`CompareTo()` : IComparable, `IComparable<T>`
+- IComparable or `IComparable<T>` 인터페이스를 구현한 타입에만 존재
 
 권장 : `Equals()` 제공할 때, object 메소드만 재정의하지 말고, IEquatable<T> 인터페이스도 구현하는 것이 좋다. <br>
 이유 : 박싱/언박싱 해결
