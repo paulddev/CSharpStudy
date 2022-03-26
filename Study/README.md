@@ -178,7 +178,74 @@ class Program
 ## Equality (자주 실수하는 부분)
 - 객체의 동등성을 조사할 때 사용
   * `==`연산자 사용
-  * 
+  * `Equals()` 가상 메소드 사용
+
+`참조 타입의 Equality` 를 살펴보자.
+- `==` 연산자
+  * 참조(주소)가 동일한가?
+  * 연산자 재정의 문법으로 기본 동작 변경이 가능하고, 기반 클래스 타입의 참조를 사용할 경우 문제가 발생.
+- `Equals()` 연산자
+  * 참조(주소)가 동일한가?
+  * 재정의하면 `객체의 상태 동일 여부`로 구현하는 경우가 많다. (두 객체의 정보가 모두 같은지?)
+```C#
+class Point
+{
+    int x = 0;
+    int y = 0;
+    public Point(int x, int y) { this.x = x; this.y = y; }
+
+    public override bool Equals(object obj) // 사용자가 재정의해서 바꿀 수 있다.
+    {
+        Point pt = (Point)obj; // 먼저 캐스팅해주고,
+
+        return pt.x == x && pt.y == y;
+    }
+
+    // == 역시 연산자 재정의를 사용해서 바꿀 수 있다.
+    // 단, static으로 만들고 == 를 만들면 반드시 != 도 같이 재정의해줘야 한다.
+    public static bool operator==(Point p1, Point p2)
+    {
+        return p1.x == p2.x && p1.y == p2.y;
+    }
+
+    public static bool operator!=(Point p1, Point p2)
+    {
+        return !(p1 == p2);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Point p1 = new Point(1, 1);
+        Point p2 = p1;
+        Point p3 = new Point(1, 1);
+
+        // 1. == 사용할 때
+        // 기본 동작 : 참조(주소)가 동일한가?
+        Console.WriteLine(p1 == p2); // true (연산자 재정의하면 : true)
+        Console.WriteLine(p1 == p3); // false(연산자 재정의하면 : true)
+
+        // 2. Equals() 가상함수 사용
+        // 기본 동작 : 참조(주소)가 동일한가?
+        Console.WriteLine(p1.Equals(p2)); // true (오버라이딩했을 시 : true)
+        Console.WriteLine(p1.Equals(p3)); // false(오버라이딩했을 시 : true)
+        Console.WriteLine();
+
+        // 만약에 object 타입으로 한다면?
+        // object 버전의 연산자가 불리게 된다.
+        object op1 = new Point(1, 1);
+        object op2 = op1;
+        object op3 = new Point(1, 1);
+
+        Console.WriteLine(op1 == op2); // true
+        Console.WriteLine(op1 == op3); // false
+        Console.WriteLine(op1.Equals(op2)); // true (오브젝트라 하더라도 가상메서드이기 때문에 내가 정의한 메서드가 호출된다.)
+        Console.WriteLine(op1.Equals(op3)); // true
+    }
+}
+```
 
 
 
