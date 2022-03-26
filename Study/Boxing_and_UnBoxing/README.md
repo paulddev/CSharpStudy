@@ -118,4 +118,47 @@ class Program
 }
 ```
 
+## Equals
+`Equals` : object, IEquatable<T>
+- object 클래스가 제공
+- 모든 타입에 존재
 
+`CompareTo()` : IComparable, IComparable<T>
+- IComparable or IComparable<T> 인터페이스를 구현한 타입에만 존재
+
+권장 : `Equals()` 제공할 때, object 메소드만 재정의하지 말고, IEquatable<T> 인터페이스도 구현하는 것이 좋다. <br>
+이유 : 박싱/언박싱 해결
+```C#
+struct Point : IEquatable<Point>
+{
+    int x;
+    int y;
+    public Point(int x, int y) { this.x = x; this.y = y; }
+
+    public bool Equals(Point pt) // 인터페이스에 있는거라 override x
+    {
+        Console.WriteLine("Point");
+        return pt.x == x && pt.y == y;
+    }
+    public override bool Equals(object obj) // 가상함수라 override
+    {
+        Console.WriteLine("object");
+        Point pt = (Point)obj;
+        return pt.x == x && pt.y == y;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Point p1 = new Point(1, 1);
+        Point p2 = new Point(1, 1);
+
+        Console.WriteLine(p1.Equals(p2));
+
+        object p3 = new Point(1, 1);
+        Console.WriteLine(p1.Equals(p3));
+    }
+}  
+```
