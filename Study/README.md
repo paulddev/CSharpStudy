@@ -45,3 +45,126 @@ b.Func(); // Base Func() 호출 why? Func() 을 재정의한게 아니기 때문
   - 대부분의 클래스는 특정 인터페이스를 구현하는 방식으로 메소드를 제공
   - 대부분의 Collection 클래스는 `ICollection` 인터페이스를 구현한다. => List에는 Clear() 메소드가 있다는 의미
 
+- Interface 선언
+  * 메소드 앞에 public 등의 접근 지정자를 표기하지 않는다.
+  * C# 8.0부터는 가능.
+  * 메소드 구현시 `override` 표기하지 않는다.
+  * 다만 `virtual`은 가능하다. (이렇게 하면 가상 메소드로 만든것, 파생 클래스에서 영향을 받을 수 있다.)
+
+## Type
+1. 초기화 되지 않은 변수는 사용할 수 없다!
+2. var (C++ auto)와 같다.
+
+C# 에서 `모든 것은 객체`다. => 10, 3.4, "AA" 모두 `객체` (멤버를 가지고 있음)
+
+C#의 타입과 .net framework 
+- `int`    | `System.Int32`
+- `double`  | `System.Double`
+- `char`    | `System.Character`
+- `string`  | `System.String`
+- `object`  | `System.Object`
+
+## System.Object
+핵심 : 모든 타입은 `System.Object`로부터 파생된다.
+```C#
+class Program : System.Object(보이지 않는 것일뿐)
+```
+C# 언어의 모든 타입은 `공통의 특징(System.Object 가 제공하는)`을 가지고 있다.
+```C#
+2개의 static Method
+3개의 virtual Method
+1개의 non-virtual instance method
+1개의 protected instance method
+
+public class Object
+{
+  public Object();
+  ~Object();
+  
+  public static bool Equals(Object objA, Object objB);
+  public static bool ReferenceEquals(Object objA, Object objB);
+  public virtual bool Equals(Object obj);
+  public virtual int GetHashCode();
+  public Type GetType();
+  public virtual string ToString();
+  protected Object MemberwiseClone();
+}
+```
+
+`ToString()`
+- 객체를 문자열로 변경하는 메소드
+- System.Object 기본 구현 : `객체의 타입 이름을 문자열로 반환`
+- 일반적으로 객체의 상태를 나타내도록 재정의한다.
+
+## Value Type vs Reference Type
+1. 메모리 구조와 객체의 위치
+```cpp
+struct Point
+{
+  int x = 1;
+  int y = 1;
+}
+
+int main()
+{
+  Point pt1;
+  Point pt2 = pt1; // 깊은 복사 (객체 자체가 2개)
+  
+  Point* p1 = new Point; // 얕은 복사 (객체 자체는 1개인데 그걸 가리키는 포인터가 2개)
+  Point* p2 = p1;
+  
+  delete p1;
+}
+
+크기가 작은 객체는 스택에 보통 만들고, 크기가 큰 객체는 힙에 만든다.
+```
+### struct vs class
+`struct` : 객체가 스택에 생성된다 (Value type) <br>
+`class`  : 객체가 힙에 생성된다 (Reference type) <br>
+```c#
+struct SPoint
+{
+    public int x;
+    public int y;
+    public SPoint(int x, int y) { this.x = x; this.y = y; }
+}
+
+class CPoint
+{
+    public int x;
+    public int y;
+    public CPoint(int x, int y) { this.x = x; this.y = y; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        SPoint sPoint = new SPoint(1, 1); // 스택 영역에 sPoint 객체가 만들어진다.
+        CPoint cPoint = new CPoint(1, 1); // 힙 영역에 메모리를 할당하고 (1,1)을 넣고 cPoint 참조 변수가 해당 영역을 가리킨다.
+
+        SPoint sPoint2 = sPoint; // 깊은 복사 (객체가 2개가 된다. sPoint와 sPoint2) => 객체 자체를 복사
+        CPoint cPoint2 = cPoint; // 얕은 복사 (객체는 1개고 cPoint2 참조 변수는 cPoint가 가리키는 곳을 가리키게 된다.) => 주소 복사(참조 복사)
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
