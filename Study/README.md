@@ -149,6 +149,36 @@ class Program
 }
 ```
 
+`arr(System.Array)` : 배열은 `참조`타입이다. <br>
+`string(System.String)` : 문자열은 `참조`타입이다. <br>
+
+- `불변 객체(immutable, 상태를 변경할 수 없는)` (한 번 만들게 되면 그걸 수정할 수 없다.)
+- 그래서 `s1 = "world"` 의 의미는 `s1 = new String("world");` 가 된다.
+- value type : `struct(int, double)`, `enum(모든 수치 관련 타입)`
+- reference type : `class(object, string, array)`, `interface(.net framework)`, `delegate(클래스 라이브러리들)`
+- `string` 와 `String` 은 같은 의미다.
+
+## Type 을 조사하는 방법
+```C#
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 1, 2, 3 };
+        Type t = arr.GetType();
+        Console.WriteLine(t.IsValueType); // False
+
+        int n = 1;
+        t = n.GetType();
+        Console.WriteLine(t.IsValueType); // True
+    }
+}
+```
+
+## Equality (자주 실수하는 부분)
+- 객체의 동등성을 조사할 때 사용
+  * `==`연산자 사용
+  * 
 
 
 
