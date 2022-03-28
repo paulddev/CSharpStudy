@@ -36,5 +36,56 @@ class Program
 }
 ```
 
-## 다차원 배열, 가변 배열
+## 다차원 배열
+```C#
+class Program
+{
+    static void Main()
+    {
+        int[] arr = new int[3];
 
+        int[,] arr1 = new int[3, 2];
+        int[,] arr2 = new int[3, 2] { { 1, 1 }, { 2, 2 }, { 3, 3 } };
+        int[,] arr3 = new int[,] { { 1, 1 }, { 2, 2 }, { 3, 3 } };
+
+        arr1[0, 0] = 5;
+        arr1[1, 0] = 4;
+
+        // 차례대로 꺼내서 출력한다.
+        foreach(int n in arr1)
+            Console.WriteLine(n);
+
+        int[,,] arr4 = new int[2, 2, 2];
+    }
+}
+```
+
+## 가변 배열 (Jagged Array)
+```C#
+class Program
+{
+    static void Main()
+    {
+        int[][] arr = new int[3][];
+        arr[0] = new int[3] { 1, 2, 3 };
+        arr[1] = new int[2] { 1, 2 };
+        arr[2] = new int[1] { 1 };
+
+        int[] temp = arr[0];
+
+        arr[0][1] = 10;
+
+        for(int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < arr[i].Length; j++)
+            {
+                Console.Write($"{arr[i][j]} ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+
+        int[][] arr2 = new int[3][] { new int[3], new int[2], new int[1] };
+    }
+}
+```
